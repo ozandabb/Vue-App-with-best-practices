@@ -1,10 +1,35 @@
 <template>
-  <div id="nav">
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
-  </div>
+  </div> -->
   <router-view/>
 </template>
+
+<script>
+import {onBeforeMount} from 'vue';
+import {useRoute, useRouter} from 'vue-router';
+import firebase from 'firebase';
+
+export default {
+  setup () {
+    const router = useRouter();
+    const route = useRoute();
+
+    onBeforeMount( () =>{
+      firebase.auth().onAuthStateChanged( (user) => {
+        if(!user){
+          router.replace("/login");
+        }
+        else if(route.path == "/login" || route.path == "/register"){
+          router.replace("/")
+        }
+      });
+
+    });
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
