@@ -15,9 +15,9 @@
                 <input class="password" type="password" placeholder="Password" v-model="password" required>
                 <input class="button btn btn-success" type="submit" value="LOGIN">
                 <p class="regSec">Need an Account ? <router-link to="/register">Register</router-link></p>
-                <div class="spinner-border text-success" role="status">
+                <!-- <div class="spinner-border text-success" role="status">
                     <span class="visually-hidden">Loading...</span>
-                </div>
+                </div> -->
             </div>
         </form>
         </div>

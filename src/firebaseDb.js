@@ -1,7 +1,4 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import firebase from 'firebase'
+import firebase from 'firebase';
 
 const firebaseConfig = {
     apiKey: "AIzaSyB7RH4Ry6IrYVDWYY3T1Fy1AM8_40UrYjQ",
@@ -12,11 +9,6 @@ const firebaseConfig = {
     appId: "1:606441460729:web:2ad7ff6ffa3fb2ec0da328"
   };
 
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-  // const firebaseApp = 
-  firebase.initializeApp(firebaseConfig);
-  
-  // export const db = firebaseApp.firestore();
-
-
-createApp(App).use(router).mount('#app')
+  export const db = firebaseApp.firestore();

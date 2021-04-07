@@ -25,6 +25,11 @@ const routes = [
     name: 'register',
     component: () => import('../views/Register.vue')
   },
+  {
+    path: '/todos',
+    name: 'todos',
+    component: () => import('../views/Todo.vue')
+  },
 ]
 
 const router = createRouter({
