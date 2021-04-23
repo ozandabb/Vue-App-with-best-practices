@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import firebase from 'firebase'
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyB7RH4Ry6IrYVDWYY3T1Fy1AM8_40UrYjQ",
     authDomain: "vue-auth-ee1f3.firebaseapp.com",
